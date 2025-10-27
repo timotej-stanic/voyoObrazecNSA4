@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vsi smo tukaj</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="slike/favicon-16x16.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="styleRegistracija4leto.css">
+    
+</head>
+
+<body>
+    <div class="glava">
+        <div class="logo"><img src="slike/logo.svg" alt="logoVoyo" style="width:6.5rem;"></div>
+
+    </div>
+    <div class="page-container">
+        <div class="login-box">
+            <div class="login-glava"> <span id="korakteks"><label class="korak">KORAK </label><label
+                            class="boldKorak">4</label><label class="korak"> OD </label><label class="boldKorak">4</label>
+                    </label></span>
+                <h1 class="h1registracija">Naročilo s plačilno kartico</h1>
+            </div>
+            <div class="login-input">
+
+
+                <a id="gpaylink"
+                    href="https://pay.google.com/gp/p/generate_gpay_btn_img?buttonColor=default&browserLocale=sl&hl=sl&buttonSizeMode=fill&merchantOrigin=https%3A%2F%2Fvoyo.si&gtid=7D613058-1FA1-4683-A315-06CFEBD3C24F.PRODUCTION&gpayButtonVariantType=1&gpayButtonType=long"><button
+                        type="button" id="btnGpay">
+
+                        Nakup s storitvijo <svg viewBox="-3 0 262 262" xmlns="http://www.w3.org/2000/svg"
+                            preserveAspectRatio="xMidYMid">
+                            <path
+                                d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                                fill="#4285F4" />
+                            <path
+                                d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                                fill="#34A853" />
+                            <path
+                                d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+                                fill="#FBBC05" />
+                            <path
+                                d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                                fill="#EB4335" />
+                        </svg> Pay
+                    </button></a>
+
+                <div id="aliali">
+                    <hr id="hrLevi">
+                    <label id="alitext">ali plačajte s/z</label>
+                    <hr id="hrDesni">
+                </div>
+                
+
+                <div id="karticaVnos">
+                    <span id="karticaTxt">Kartica</span>
+
+                    <span id="glavaKarticaText">Vsa polja so obvezna, razen če ni označeno drugače.</span>
+                    
+                    <span class="podatkiKarticeText">Številka kartice</span>
+
+                    <input type="text" inputmode="numeric" name="stKartice" id="stKartice" placeholder="1234 5678 9012 3456" maxlength="19"> 
+                    
+                    <div><span><img src="https://checkoutshopper-live.adyen.com/checkoutshopper/images/logos/diners.svg"
+                                alt="Diners Club" class="ikonaBanka"></span><span><img
+                                src="https://checkoutshopper-live.adyen.com/checkoutshopper/images/logos/mc.svg"
+                                alt="MasterCard" class="ikonaBanka"></span><span><img
+                                src="https://checkoutshopper-live.adyen.com/checkoutshopper/images/logos/visa.svg"
+                                alt="VISA" class="ikonaBanka"></span></div>
+
+                    <div id="datumcvv">
+                        <div id="datum">
+                            <span class="podatkiKarticeText">Datum veljavnosti</span>
+                        
+                            <input type="text" inputmode="numeric" name="datumv" id="datumv" placeholder="MM/LL" maxlength="5">
+                        </div>
+
+                        <div id="cvvVnos">
+                            <span class="podatkiKarticeText">Varnostna koda</span>
+                          
+                            <input type="text" inputmode="numeric" name="cvv" id="cvv" placeholder="3 števke" maxlength="3">
+                        </div>
+
+                    </div>
+
+
+                    <div id="ime">
+                        <span class="podatkiKarticeText" id="podatkiIme">Ime na kartici</span>
+                       
+                        <input type="text" name="imeNaKartici" id="imeNaKartici" placeholder="Janez Novak">
+                    </div>
+
+
+                    <button type="button" id="btnplacilo" name="btnplacilo"><img class="adyen-checkout__button__icon" src="https://checkoutshopper-live.adyen.com/checkoutshopper/images/components/lock.svg" alt="" aria-hidden="true">  Plačilo 79,99€</button>
+                </div>
+               
+
+            </div>
+
+            <div id="podpora">
+                <div class="kontakt"> <span class="pomoc">Potrebuješ dodatno pomoč?</span> <a href="kontakt.html"
+                        class="kontaktirajte">Kontaktirajte nas</a>
+                    <div class="telefon"> <onl-icons><svg class="iconPhone" id="Layer_1" data-name="Layer 1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <title>icon-phone</title>
+                                <path
+                                    d="M20.6147 2.89536L16.9331 2.0461C16.0894 1.85142 15.2297 2.2877 14.8886 3.08345L13.1894 7.04798C12.8776 7.77555 13.0877 8.63383 13.7004 9.13508L15.2635 10.414C14.1488 12.4599 12.46 14.1488 10.414 15.2635L9.13508 13.7004C8.63383 13.0877 7.77555 12.8777 7.04798 13.1895L3.08345 14.8886C2.2877 15.2297 1.85142 16.0895 2.0461 16.9331L2.8954 20.6147C3.0836 21.4304 3.7997 22 4.63673 22C14.2011 22 22 14.2551 22 4.63673C22 3.79966 21.4304 3.08356 20.6147 2.89536ZM4.70661 20.1248L3.88938 16.5831L7.72579 14.9389L9.90219 17.5988C13.7618 15.7882 15.7845 13.7693 17.5989 9.90215L14.9389 7.72579L16.5831 3.88938L20.1248 4.70661C20.0879 13.2061 13.2073 20.0877 4.70661 20.1248Z">
+                                </path>
+                            </svg></onl-icons> <a class="voyophone" href="tel:030777770">030 77 77 70</a> </div>
+                    <div class="eposta"> <onl-icons><svg class="iconMail" id="Layer_1" data-name="Layer 1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <title>icon-envelope</title>
+                                <path
+                                    d="M20.125 4.5H3.875C2.83945 4.5 2 5.33945 2 6.375V17.625C2 18.6605 2.83945 19.5 3.875 19.5H20.125C21.1605 19.5 22 18.6605 22 17.625V6.375C22 5.33945 21.1605 4.5 20.125 4.5ZM20.125 6.375V7.96895C19.2491 8.68219 17.8528 9.79125 14.8677 12.1287C14.2098 12.6462 12.9067 13.8893 12 13.8748C11.0934 13.8895 9.78988 12.646 9.13231 12.1287C6.14766 9.7916 4.75098 8.6823 3.875 7.96895V6.375H20.125ZM3.875 17.625V10.3749C4.77008 11.0879 6.03941 12.0883 7.97414 13.6033C8.82793 14.2754 10.3231 15.759 12 15.75C13.6686 15.759 15.1449 14.2969 16.0255 13.6036C17.9602 12.0886 19.2299 11.0879 20.125 10.375V17.625H3.875Z">
+                                </path>
+                            </svg></onl-icons> <a class="voyomail" href="podpora@voyo.si">podpora@voyo.si</a> </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="noga">
+            <div class="NogaVPPN"> <span class="nogaBold">VOYO</span> <a class="nogaText"
+                    href="https://voyo.si/vsebine/faq">Pogosta vprašanja</a> <a class="nogaText"
+                    href="https://images.24ur.com/media//document/May2025/63420741.pdf?v=1748722529#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Cenik</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/61470341.pdf?v=1407103200">Vizualna
+                    opozorila</a>
+            </div>
+            <div class="NogaVPPN"> <span class="nogaBold">POMOČ</span> <a class="nogaText"
+                    href="https://voyo.si/vsebine/kontakt">Kontakt</a> <a class="nogaText"
+                    href="https://voyo.si/vsebine/povezovanje-naprav">Povezovanje naprav</a> <a class="nogaText"
+                    href="https://voyo.si/preveri">Preveri povezavo</a> </div>
+            <div class="NogaVPPN"> <span class="nogaBold">POGOJI</span> <a class="nogaText"
+                    href="https://images.24ur.com/media//document/Oct2025/63485389.pdf?v=1760814247">Splošni pogoji</a>
+                <a class="nogaText"
+                    href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625">Politika
+                    zasebnosti</a> <a class="nogaText" href="https://voyo.si/vsebine/piskotki">Piškotki</a> <a
+                    class="nogaText" href="https://voyo.si/prijava">Spremeni nastavive piškotkov</a> <a class="nogaText"
+                    href="https://pro-plus.si/#section-contact">PRO PLUS d.o.o.</a> <a class="nogaText"
+                    href="https://images.24ur.com/media//document/Apr2025/63398545.pdf?v=1744808228#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Nagradna
+                    igra</a>
+            </div>
+            <div class="NogaVPPN"> <span class="nogaBold">NAPRAVE</span> <a class="nogaText"
+                    href="https://voyo.si/tv">Pametni televizorji</a> <a class="nogaText"
+                    href="https://play.google.com/store/apps/details?id=com.phonegap.voyo">Google Play</a> <a
+                    class="nogaText" href="https://apps.apple.com/si/app/voyo-si/id451129586">App Store</a> </div>
+        </div> <span class="copy">© 2025 VOYO. Vse pravice pridržane.</span>
+    </footer>
+
+    <script>
+
+
+        const cardInput = document.getElementById('stKartice');
+        const dateInput = document.getElementById('datumv');
+        const cvvInput = document.getElementById('cvv');
+        const paymentButton = document.getElementById('btnplacilo');
+
+        // Maska za številko kartice (XXXX XXXX XXXX XXXX)
+        cardInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
+            value = value.substring(0, 16); // Omejitev na 16 števk
+            // Vstavi presledek vsake 4 števke
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+            e.target.value = value;
+        });
+
+        // Maska za datum (MM/LL)
+        dateInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
+            value = value.substring(0, 4); // Omejitev na 4 števke
+
+            if (value.length > 2) {
+                // Vstavi poševnico
+                value = value.substring(0, 2) + '/' + value.substring(2);
+            }
+            e.target.value = value;
+        });
+
+        // Omejitev CVV na 3 števke
+        cvvInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
+            e.target.value = value.substring(0, 3); // Omejitev na 3 števke
+        });
+
+
+        // --- Validation Logic (Ob kliku na gumb) ---
+
+        paymentButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prepreči privzeto dejanje
+
+            const stKartice = cardInput.value.replace(/\s/g, ''); // Očisti presledke
+            const datumV = dateInput.value;
+            const cvv = cvvInput.value;
+            const imeNaKartici = document.getElementById('imeNaKartici').value.trim();
+
+            let validationErrors = [];
+
+            // 1. Validacija številke kartice (16 števk)
+            if (stKartice.length !== 16 || !/^\d{16}$/.test(stKartice)) {
+                validationErrors.push("Številka kartice mora imeti 16 števk.");
+            }
+
+            // 2. Validacija CVV (3 števke)
+            if (cvv.length !== 3 || !/^\d{3}$/.test(cvv)) {
+                validationErrors.push("Varnostna koda (CVV) mora imeti natanko 3 števke.");
+            }
+
+            // 3. Validacija Datuma Veljavnosti (MM/LL in logična kontrola > 10/25)
+            if (!/^\d{2}\/\d{2}$/.test(datumV)) {
+                validationErrors.push("Datum veljavnosti ni v pravilnem formatu MM/LL.");
+            } else {
+                const [monthStr, yearStr] = datumV.split('/');
+                const month = parseInt(monthStr, 10);
+                const year = parseInt(yearStr, 10); // Dvomestno leto (npr. 25)
+
+                // Preverjanje veljavnosti meseca
+                if (month < 1 || month > 12) {
+                    validationErrors.push("Mesec veljavnosti ni veljaven (1-12).");
+                }
+                
+                // Ključno preverjanje: MM/LL mora biti STROGO > 10/25
+                const requiredYear = 25;
+                const requiredMonth = 10;
+                let isExpired = false;
+
+                if (year < requiredYear) {
+                    isExpired = true; // Prej kot 25 (npr. 24)
+                } else if (year === requiredYear) {
+                    if (month <= requiredMonth) {
+                        isExpired = true; // 10/25 ali manj
+                    }
+                }
+                
+                // Preverjanje, da vnesemo smiselno leto v prihodnosti (npr. do 99)
+                if (year > 99) {
+                     validationErrors.push("Leto veljavnosti ni veljavno.");
+                }
+
+
+                if (isExpired) {
+                    validationErrors.push("Kartica je potekla ali velja le do 10/25. Vnos mora biti strogo po 10/25.");
+                }
+            }
+
+            // 4. Validacija Imena na Kartici (osnovno)
+            if (imeNaKartici.length < 2) {
+                validationErrors.push("Ime na kartici je obvezno.");
+            }
+
+
+            if (validationErrors.length > 0) {
+                // Prikaz SweetAlert za napako
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Napaka Pri Plačilu!',
+                    html: `<p class="text-left font-medium">Napačni vnosi. Prosimo, popravite naslednje napake:</p><ul style="list-style-type: disc; margin-left: 20px; padding-left: 0; text-align: left;">${validationErrors.map(err => `<li>${err}</li>`).join('')}</ul>`,
+                    confirmButtonText: 'Popravi Vnose',
+                    customClass: {
+                        popup: 'moj-swal-popup',
+                        title: 'moj-swal-title',
+                        content: 'moj-swal-content',
+                        confirmButton: 'moj-swal-button'
+                    }
+                });
+            } else {
+                // Prikaz SweetAlert za uspeh
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Uspešno!',
+                    text: 'Transakcija uspešna! Preusmerjeni boste na glavno stran.',
+                    confirmButtonText: 'Nadaljuj',
+                    allowOutsideClick: false,
+                    customClass: {
+                        popup: 'moj-swal-popup',
+                        title: 'moj-swal-title',
+                        content: 'moj-swal-content',
+                        confirmButton: 'moj-swal-button'
+                    }
+                }).then((result) => {
+                    // Preusmeritev po potrditvi
+                    if (result.isConfirmed) {
+                        window.location.href = 'index.html';
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

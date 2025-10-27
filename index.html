@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vsi smo tukaj</title>
+    <link rel="stylesheet" href="styleIndex.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/slike/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="glava">
+        <div class="logo"><img src="slike/logo.svg" alt="logoVoyo" style="width:6.5rem;"></div>
+        <div class="header-reg-group">
+            <span class="header-text">Že imaš VOYO?</span>
+            <a href="registracija.html"><button class="btnGlavaRegistracija">PRIJAVI SE</button></a>
+        </div>
+    </div>
+
+    <div class="page-container">
+        
+    </div>
+    <footer>
+        <div class="noga">
+            <div class="NogaVPPN">
+                <span class="nogaBold">VOYO</span>
+                <a class="nogaText" href="https://voyo.si/vsebine/faq">Pogosta vprašanja</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/May2025/63420741.pdf?v=1748722529#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Cenik</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/61470341.pdf?v=1407103200">Vizualna opozorila</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">POMOČ</span>
+                <a class="nogaText" href="https://voyo.si/vsebine/kontakt">Kontakt</a>
+                <a class="nogaText" href="https://voyo.si/vsebine/povezovanje-naprav">Povezovanje naprav</a>
+                <a class="nogaText" href="https://voyo.si/preveri">Preveri povezavo</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">POGOJI</span>
+                <a class="nogaText" href="https://images.24ur.com/media//document/Oct2025/63485389.pdf?v=1760814247">Splošni pogoji</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625">Politika zasebnosti</a>
+                <a class="nogaText" href="https://voyo.si/vsebine/piskotki">Piškotki</a>
+                <a class="nogaText" href="https://voyo.si/prijava">Spremeni nastavive piškotkov</a>
+                <a class="nogaText" href="https://pro-plus.si/#section-contact">PRO PLUS d.o.o.</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/Apr2025/63398545.pdf?v=1744808228#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Nagradna igra</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">NAPRAVE</span>
+                <a class="nogaText" href="https://voyo.si/tv">Pametni televizorji</a>
+                <a class="nogaText" href="https://play.google.com/store/apps/details?id=com.phonegap.voyo">Google Play</a>
+                <a class="nogaText" href="https://apps.apple.com/si/app/voyo-si/id451129586">App Store</a>
+            </div>
+        </div>
+        <span class="copy">© 2025 VOYO. Vse pravice pridržane.</span>
+    </footer>
+
+    <script>
+        const TARGET_URL = "index.html";
+        const loginButton = document.getElementById('loginSubmitBtn');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('geslo');
+
+       
+        function handleLoginAction() {
+          
+            if (emailInput.value.trim() === "" || passwordInput.value.trim() === "") {
+              
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Opozorilo',
+                    text: 'Prosimo, vnesite e-naslov in geslo.',
+                    confirmButtonText: 'V redu',
+                    confirmButtonColor: '#cd50ff'
+                });
+                return; 
+            }
+
+           
+            Swal.fire({
+                title: 'Uspešna prijava!',
+                html: 'Prijavljeni ste v VOYO. <br> Preusmeritev na glavno stran sledi čez 2 sekundi...',
+                icon: 'success',
+                timer: 2000, 
+                timerProgressBar: true,
+                showConfirmButton: false, 
+                willClose: () => {
+                   
+                    window.location.replace(TARGET_URL);
+                }
+            });
+        }
+
+        
+        if (loginButton) {
+            loginButton.addEventListener('click', handleLoginAction);
+        }
+    </script>
+</body>
+
+</html>

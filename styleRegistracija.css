@@ -1,0 +1,635 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body {
+    background: url("/slike/waves2.svg")center -50px no-repeat;
+    background-color: #140a14;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+
+
+.glava {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-image: linear-gradient(#140a14, rgba(20, 10, 20, 0));
+}
+
+
+.header-reg-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-text {
+    font-size: 16px;
+    color: #9c9c9c;
+    font-weight: 400;
+}
+
+.btnGlavaRegistracija {
+    background: #cd50ff;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.page-container {
+    margin-top: 82px;
+    display: flex;
+    justify-content: center;
+    min-height: 1300px;
+    padding-top: 20px;
+}
+
+
+.login-box {
+    width: 500px;
+    height: 80%;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding-left: 32px;
+    padding-right: 32px;
+    color: black;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.login-box {
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    padding: 32px;
+    color: #000;
+
+    display: relative;
+    top: 0;
+}
+
+.login-glava {
+    margin-left: -32px;
+    width: 500px;
+    height: 140px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding-top: 32px;
+    line-height: 5px;
+}
+
+
+.korak {
+    font-weight: 400;
+    font-size: 12px;
+    color: gray;
+
+}
+
+.boldKorak {
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+#korakteks {
+    margin-left: 32px;
+}
+
+.h1registracija {
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+}
+
+#glavaText {
+    margin-left: 32px;
+    font-size: 14px;
+    color: #8a8a8a
+}
+
+.login-input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+}
+
+#email {
+    width: 436px;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: -5px;
+}
+
+#email:focus {
+    border: 2px solid #cd50ff;
+}
+
+#emailText {
+    margin-left: 16px;
+    font-size: 12px;
+    color: #8a8a8a
+}
+
+.checkINteks {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#pravnaOseba {
+    border-bottom: 1px solid rgb(201, 201, 201);
+    width: 500px;
+    margin-left: -32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    display: none;
+    /* 🔹 To je bistveno */
+}
+
+#pravnaOseba.show {
+    display: block;
+    /* 🔹 pokaži samo navzdol */
+}
+
+
+#jePravna {
+    display: block;
+}
+
+#pravnaTeks {
+    margin-left: 12px;
+    font-size: 14px;
+    display: block;
+}
+
+#pravnaTeks::selection {
+    background: none;
+}
+
+
+#imePodjetja {
+    width: 436px;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 3px;
+    outline: none;
+}
+
+#davcnaSt {
+    width: 436px;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 3px;
+    outline: none;
+    margin-bottom: -2px;
+}
+
+#davcnastTeks {
+    display: block;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #9c9c9c;
+}
+
+#davcnastTeks::selection {
+    background: none;
+}
+
+
+#geslo {
+    width: 436px;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 3px;
+    outline: none;
+    margin-top: 26px;
+}
+
+#geslo:focus {
+    border: 2px solid #cd50ff;
+
+}
+
+#gesloText {
+    margin-left: 16px;
+    font-size: 12px;
+    color: #8a8a8a
+}
+
+#potrdiGeslo {
+    width: 100%;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 3px;
+    outline: none;
+    margin-top: 16px;
+
+}
+
+
+
+#telefon {
+    width: 100%;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 3px;
+    outline: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: block;
+    float: left;
+}
+
+
+#uporabaTelText {
+    font-size: 12px;
+    color: #696969;
+    display: block;
+    float: right;
+    width: 410px;
+    margin-bottom: 16px;
+}
+
+
+
+
+#uporabaPodCheck,
+#pogojiCheck {
+    border-top: 1px solid #dcdcdc;
+    width: 496px;
+    margin-left: -32px;
+    padding: 20px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+
+
+#uporabaPodText,
+#pogojiText {
+    font-size: 12px;
+    color: #696969;
+    line-height: 1.4;
+}
+
+.linkPogoji {
+    color: #9D74E8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.linkPogoji:hover {
+    text-decoration: underline;
+}
+
+
+.btnNadaljuj {
+    margin-top: 0px;
+    width: 436px;
+    height: 45px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cd50ff;
+    opacity: 0.4;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.btnNadaljuj.active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btnNadaljuj:hover.active {
+    background-color: #b442e3;
+}
+
+
+#social {
+    margin-top: 16px;
+    margin-left: -32px;
+    padding-left: 32px;
+    border-top: 1px solid rgb(200, 200, 200);
+    border-bottom: 1px solid rgb(200, 200, 200);
+    width: 500px;
+    height: 130px;
+}
+
+.facebookPrijava {
+    margin-top: 16px;
+    display: block;
+    width: 436px;
+    height: 40px;
+    text-align: left;
+    background-color: #efe7fb;
+    border: none;
+    color: #6E32DC;
+    font-size: 14px;
+    font-weight: 200;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+.googlePrijava {
+    margin-top: 16px;
+    display: block;
+    width: 436px;
+    height: 40px;
+    text-align: left;
+    background-color: #efe7fb;
+    border: none;
+    color: #6E32DC;
+    font-size: 14px;
+    font-weight: 200;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+svg path {
+
+    fill: #6e32dc;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+
+.register {
+    margin-left: -32px;
+    padding-left: 32px;
+    padding-top: 10px;
+    width: 500px;
+    height: 100px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.registerText {
+    margin-top: 10px;
+    color: #838383;
+    font-size: 14px;
+}
+
+.btnRegistrirajSe {
+    margin-top: 10px;
+    width: 436px;
+    height: 40px;
+    color: #6e32dc;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #6e32dc;
+    background-color: white;
+}
+
+.pomoc {
+
+    color: black;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.kontaktirajte {
+    color: #9D74E8;
+    text-decoration: none;
+    margin-left: 4px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.kontaktirajte:hover {
+    text-decoration: underline;
+}
+
+.kontakt {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.telefon,
+.eposta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.iconPhone,
+.iconMail {
+    height: 18px;
+    width: 18px;
+    fill: #9D74E8;
+    flex-shrink: 0;
+}
+
+.voyophone,
+.voyomail {
+    font-size: 14px;
+    color: #9D74E8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.voyophone:hover,
+.voyomail:hover {
+    color: #7e52d8;
+}
+
+
+footer {
+    padding-top: 32px;
+    width: 100%;
+    background-color: black;
+    font-size: 14px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.noga {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.NogaVPPN {
+    margin: 20px 0;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+.noga::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nogaBold {
+    font-weight: 600;
+}
+
+.nogaText {
+    line-height: 30px;
+    display: block;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nogaText:hover {
+    color: #dddddd;
+}
+
+.copy {
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-text {
+        display: none;
+    }
+
+    .page-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #pravnaOseba {
+        width: calc(100% + 64px);
+    }
+
+
+    #imePodjetja,
+    #davcnaSt {
+        width: calc(100% - 1px);
+
+    }
+
+
+    .register {
+        margin-right: -32px;
+    }
+
+    .login-box {
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .login-glava,
+    .register {
+        width: calc(100% + 64px);
+    }
+
+    #email,
+    #geslo {
+        width: 100%;
+    }
+
+
+    #btnNadaljuj {
+        width: 100%;
+    }
+
+    #uporabaPodCheck,
+    #pogojiCheck {
+
+        width: 100%;
+    }
+
+    #uporabaTelText {
+        width: calc(100% - 30px);
+        margin-left: 10px;
+    }
+
+    .noga {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .NogaVPPN {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

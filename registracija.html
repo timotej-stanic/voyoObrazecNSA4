@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vsi smo tukaj</title>
+    <link rel="stylesheet" href="styleRegistracija.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="icon" type="image/png" sizes="16x16" href="slike/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="glava">
+        <div class="logo"><img src="slike/logo.svg" alt="logoVoyo" style="width:6.5rem;"></div>
+        <div class="header-reg-group">
+            <span class="header-text">Že imaš VOYO?</span>
+            <a href="registracija.html"><button class="btnGlavaRegistracija">PRIJAVI SE</button></a>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="login-box">
+            <div class="login-glava">
+                <span id="korakteks"><label class="korak">KORAK </label><label class="boldKorak">1</label><label
+                        class="korak"> OD </label><label class="boldKorak">4</label> </label></span>
+                <h1 class="h1registracija">Registracija</h1>
+                <label id="glavaText">Izberi e-naslov in geslo za prijavo v VOYO.</label>
+            </div>
+
+            
+                <div class="login-input">
+                    <input type="email" id="email" name="email" placeholder="E-naslov*" required>
+                    <label id="emailText">Obvezno polje</label><br>
+
+                    <div class="checkINteks">
+                        <input type="checkbox" id="jePravna" name="jePravnaOseba" ><label id="pravnaTeks"
+                            for="jePravna">Prijavljam se kot pravna oseba (neobvezno)</label>
+                    </div>
+
+                    <div id="pravnaOseba">
+                        <input type="tekst" id="imePodjetja" name="imePodjetja" placeholder="Ime podjetja" required>
+                        <input type="number" id="davcnaSt" name="davcnaSt" placeholder="Davčna Številka" required>
+                        <label id="davcnastTeks">V obliki SI12345678 ali 12345678</label>
+                    </div>
+
+
+                    <input type="password" id="geslo" name="geslo" placeholder="Geslo*" required>
+                    <label id="gesloText">Geslo mora vsebovati od 5 do 32 znakov</label>
+
+                    <input type="password" id="potrdiGeslo" name="potrdiGeslo" placeholder="Potrditev gesla*" required>
+
+                    <input type="tel" id="telefon" name="telefon" placeholder="Telefonska številka" >
+
+                    <input type="checkbox" id="uporabaTel" name="uporabaTelst" >
+                    <label for="uporabaTel" id="uporabaTelText">Strinjam se z uporabo telefonske številke za namene
+                        obveščanja o storitvah podjetja ProPlus*</label>
+
+                </div>
+
+
+
+
+                <div id="uporabaPodCheck">
+                    <input type="checkbox" id="uporabaPod" name="uporabaPod" >
+                    <label for="uporabaPod" id="uporabaPodText">
+                        Strinjam se, da spletne strani Pro Plus na podlagi mojih osebnih podatkov in zgodovine ogledov
+                        vsebin oblikujejo moj profil in mi priporočajo meni primerne vsebine, oglase ter s tem
+                        izboljšajo mojo uporabniško izkušnjo.
+                    </label>
+                </div>
+
+                <div id="NadaljujinCheck">
+                <div id="pogojiCheck">
+                    <input type="checkbox" id="pogoji" name="pogoji" required>
+                    <label for="pogoji" id="pogojiText">
+                        Strinjam se s <a href="https://images.24ur.com/media//document/Mar2025/63381122.pdf?v=1741945995" class="linkPogoji">Splošnimi pogoji registracije</a> in
+                        <a href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625" class="linkPogoji">Politiko zasebnosti</a>.
+                    </label>
+                    
+                </div>
+
+ <button  id="btnNadaljuj" class="btnNadaljuj" disabled>NADALJUJ</button></div>
+            
+
+
+
+            <div class="kontakt">
+                
+            <span class="pomoc">Potrebuješ dodatno pomoč?</span> <a href="kontakt.html"
+                class="kontaktirajte">Kontaktirajte nas</a>
+                <div class="telefon">
+                    <onl-icons><svg class="iconPhone" id="Layer_1" data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 24 24" aria-hidden="true">
+                            <title>icon-phone</title>
+                            <path
+                                d="M20.6147 2.89536L16.9331 2.0461C16.0894 1.85142 15.2297 2.2877 14.8886 3.08345L13.1894 7.04798C12.8776 7.77555 13.0877 8.63383 13.7004 9.13508L15.2635 10.414C14.1488 12.4599 12.46 14.1488 10.414 15.2635L9.13508 13.7004C8.63383 13.0877 7.77555 12.8777 7.04798 13.1895L3.08345 14.8886C2.2877 15.2297 1.85142 16.0895 2.0461 16.9331L2.8954 20.6147C3.0836 21.4304 3.7997 22 4.63673 22C14.2011 22 22 14.2551 22 4.63673C22 3.79966 21.4304 3.08356 20.6147 2.89536ZM4.70661 20.1248L3.88938 16.5831L7.72579 14.9389L9.90219 17.5988C13.7618 15.7882 15.7845 13.7693 17.5989 9.90215L14.9389 7.72579L16.5831 3.88938L20.1248 4.70661C20.0879 13.2061 13.2073 20.0877 4.70661 20.1248Z">
+                            </path>
+                        </svg></onl-icons>
+                    <a class="voyophone" href="tel:030777770">030 77 77 70</a>
+                </div>
+
+                <div class="eposta">
+                    <onl-icons><svg class="iconMail" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" aria-hidden="true">
+                            <title>icon-envelope</title>
+                            <path
+                                d="M20.125 4.5H3.875C2.83945 4.5 2 5.33945 2 6.375V17.625C2 18.6605 2.83945 19.5 3.875 19.5H20.125C21.1605 19.5 22 18.6605 22 17.625V6.375C22 5.33945 21.1605 4.5 20.125 4.5ZM20.125 6.375V7.96895C19.2491 8.68219 17.8528 9.79125 14.8677 12.1287C14.2098 12.6462 12.9067 13.8893 12 13.8748C11.0934 13.8895 9.78988 12.646 9.13231 12.1287C6.14766 9.7916 4.75098 8.6823 3.875 7.96895V6.375H20.125ZM3.875 17.625V10.3749C4.77008 11.0879 6.03941 12.0883 7.97414 13.6033C8.82793 14.2754 10.3231 15.759 12 15.75C13.6686 15.759 15.1449 14.2969 16.0255 13.6036C17.9602 12.0886 19.2299 11.0879 20.125 10.375V17.625H3.875Z">
+                            </path>
+                        </svg></onl-icons>
+                    <a class="voyomail" href="podpora@voyo.si">podpora@voyo.si</a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <footer>
+        <div class="noga">
+            <div class="NogaVPPN">
+                <span class="nogaBold">VOYO</span>
+                <a class="nogaText" href="https://voyo.si/vsebine/faq">Pogosta vprašanja</a>
+                <a class="nogaText"
+                    href="https://images.24ur.com/media//document/May2025/63420741.pdf?v=1748722529#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Cenik</a>
+                <a class="nogaText" href="https://images.24ur.com/media//document/61470341.pdf?v=1407103200">Vizualna
+                    opozorila</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">POMOČ</span>
+                <a class="nogaText" href="https://voyo.si/vsebine/kontakt">Kontakt</a>
+                <a class="nogaText" href="https://voyo.si/vsebine/povezovanje-naprav">Povezovanje naprav</a>
+                <a class="nogaText" href="https://voyo.si/preveri">Preveri povezavo</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">POGOJI</span>
+                <a class="nogaText"
+                    href="https://images.24ur.com/media//document/Oct2025/63485389.pdf?v=1760814247">Splošni pogoji</a>
+                <a class="nogaText"
+                    href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625">Politika
+                    zasebnosti</a>
+                <a class="nogaText" href="https://voyo.si/vsebine/piskotki">Piškotki</a>
+                <a class="nogaText" href="https://voyo.si/prijava">Spremeni nastavive piškotkov</a>
+                <a class="nogaText" href="https://pro-plus.si/#section-contact">PRO PLUS d.o.o.</a>
+                <a class="nogaText"
+                    href="https://images.24ur.com/media//document/Apr2025/63398545.pdf?v=1744808228#dmid=b41d9ebb-95b0-444d-974b-e37b99a97942">Nagradna
+                    igra</a>
+            </div>
+            <div class="NogaVPPN">
+                <span class="nogaBold">NAPRAVE</span>
+                <a class="nogaText" href="https://voyo.si/tv">Pametni televizorji</a>
+                <a class="nogaText" href="https://play.google.com/store/apps/details?id=com.phonegap.voyo">Google
+                    Play</a>
+                <a class="nogaText" href="https://apps.apple.com/si/app/voyo-si/id451129586">App Store</a>
+            </div>
+        </div>
+        <span class="copy">© 2025 VOYO. Vse pravice pridržane.</span>
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
+

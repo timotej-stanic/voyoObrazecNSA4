@@ -1,0 +1,616 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto;
+        }
+
+        body {
+            background: url("/slike/waves2.svg") center -50px no-repeat;
+            background-color: #140a14;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .glava {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-image: linear-gradient(#140a14, rgba(20, 10, 20, 0));
+        }
+
+
+        .header-reg-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-text {
+            font-size: 16px;
+            color: #9c9c9c;
+            font-weight: 400;
+        }
+
+        .btnGlavaRegistracija {
+            background: #cd50ff;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .page-container {
+            margin-top: 82px;
+            display: flex;
+            justify-content: center;
+            min-height: 1300px;
+            padding-top: 20px;
+        }
+
+
+        .login-box {
+            width: 500px;
+            height: 1100px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            padding: 16px;
+            color: #000;
+            display: relative;
+            top: 0;
+        }
+
+        .login-glava {
+            margin-left: -16px;
+            width: 500px;
+            height: 140px;
+            border-bottom: 1px solid rgb(200, 200, 200);
+            padding-top: 32px;
+            line-height: 5px;
+        }
+
+
+        .korak {
+            font-weight: 400;
+            font-size: 12px;
+            color: gray;
+
+        }
+
+        .boldKorak {
+            font-size: 12px;
+            font-weight: 600;
+
+        }
+
+        #korakteks {
+            margin-left: 32px;
+        }
+
+        .h1registracija {
+            margin-top: 32px;
+            margin-left: 32px;
+            margin-right: 32px;
+            margin-bottom: 16px;
+            color: #000000;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 30px;
+
+        }
+
+        #glavaText {
+            margin-left: 32px;
+            font-size: 14px;
+            color: #8a8a8a
+        }
+
+
+
+        .login-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+
+        #varno {
+            background-color: rgb(212, 212, 212);
+            width: 100%;
+            width: 150px;
+            height: 30px;
+            font-size: 12px;
+            line-height: 30px;
+            padding-left: 10px;
+            color: #414141;
+            margin-right: -245px;
+        }
+
+
+        #izbira {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+
+        .moznost-placila {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 12px 16px;
+            margin: 8px 0;
+            cursor: pointer;
+            position: relative;
+            transition: border-color 0.3s, background-color 0.3s;
+            background-color: white;
+        }
+
+
+        .moznost-placila .ikona {
+            width: 22px;
+            height: 22px;
+            fill: #6f2cff;
+            margin-right: 10px;
+        }
+
+
+        .moznost-placila span {
+            flex-grow: 1;
+            font-size: 14px;
+            color: #333;
+        }
+
+
+        .moznost-placila:hover {
+            border: 1px solid #a56eff;
+        }
+
+
+        input[type="radio"] {
+            display: none;
+        }
+
+
+        input[type="radio"]:checked+.moznost-placila {
+            border-color: #a56eff;
+            background: #f8f3ff;
+        }
+
+
+        .moznost-placila .kljukica {
+            width: 22px;
+            height: 22px;
+            fill: #a56eff;
+            display: none;
+        }
+
+
+        input[type="radio"]:checked+.moznost-placila .kljukica {
+            display: block;
+        }
+
+        .povezava {
+            color: #a56eff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .povezava:hover {
+            text-decoration: underline;
+        }
+
+        #pogojiCheck {
+            border-top: 1px solid #dcdcdc;
+            width: 496px;
+            padding: 20px 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-sizing: border-box;
+        }
+
+
+        #pogojiText {
+            font-size: 12px;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+        .linkPogoji {
+            color: #9D74E8;
+            text-decoration: none;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .linkPogoji:hover {
+            text-decoration: underline;
+        }
+
+        #drobnitisk {
+            display: block;
+            font-size: 10px;
+            width: 400px;
+        }
+
+
+
+
+        #noviceCheck {
+
+            width: 496px;
+            padding: 20px 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            box-sizing: border-box;
+        }
+
+
+        #noviceText {
+            font-size: 12px;
+            color: #111111;
+            line-height: 1.4;
+        }
+
+
+
+        .btnNadaljuj {
+            margin-top: 0px;
+            margin-left: 30px;
+            width: 436px;
+            height: 45px;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #b442e3;
+
+            transition: opacity 0.3s, background-color 0.3s;
+        }
+
+        .btnNadaljuj[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background-color: #b442e3;
+        }
+
+        .btnNadaljuj:not([disabled]):hover {
+            background-color: #c760f3;
+        }
+
+        ul {
+            margin-top: 40px;
+            margin-left: 60px;
+        }
+
+        li {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #8a8a8a;
+        }
+
+        .ulLink {
+            color: #a56eff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .ulLink:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        #podpora {
+            border-top: 1px solid #d3d3d3;
+            margin-top: 20px;
+            width: 500px;
+            margin-left: -16px;
+        }
+
+        .pomoc {
+            color: black;
+            font-weight: 200;
+            font-size: 14px;
+
+        }
+
+        .kontaktirajte {
+            color: #9D74E8;
+            text-decoration: none;
+            margin-left: 4px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .kontaktirajte:hover {
+            text-decoration: underline;
+        }
+
+        .kontakt {
+            margin-left: 32px;
+            margin-top: 16px;
+            padding-top: 10px;
+
+        }
+
+        .telefon,
+        .eposta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .iconPhone,
+        .iconMail {
+            height: 18px;
+            width: 18px;
+            fill: #9D74E8;
+            flex-shrink: 0;
+        }
+
+        .voyophone,
+        .voyomail {
+            font-size: 14px;
+            color: #9D74E8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .voyophone:hover,
+        .voyomail:hover {
+            font-size: 14px;
+            color: #9D74E8;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .voyophone:hover,
+        .voyomail:hover {
+            color: #7e52d8;
+        }
+footer {
+    padding-top: 32px;
+    width: 100%;
+    background-color: black;
+    font-size: 14px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.noga {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.NogaVPPN {
+    margin: 20px 0;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+.noga::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nogaBold {
+    font-weight: 600;
+}
+
+.nogaText {
+    line-height: 30px;
+    display: block;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nogaText:hover {
+    color: #dddddd;
+}
+
+.copy {
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+        input[type="checkbox"] {
+            transform: scale(1.4);
+            accent-color: #6e32db;
+            cursor: pointer;
+            margin-right: 6px;
+            border-radius: 0;
+        }
+
+
+        .moj-swal-popup {
+            font-family: Roboto, sans-serif !important;
+            border-radius: 8px !important;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4) !important;
+            max-width: 350px !important; 
+        }
+
+        .moj-swal-title {
+            color: #000000 !important;
+            font-weight: 600 !important;
+            font-size: 1.5rem !important;
+        }
+
+        .moj-swal-content {
+            color: #4a4a4a !important;
+            text-align: center !important;
+        }
+
+        .moj-swal-button {
+            background-color: #b442e3 !important; 
+            color: white !important;
+            border: none !important;
+            border-radius: 4px !important;
+            font-weight: 700 !important;
+            padding: 10px 20px !important;
+            transition: background-color 0.3s;
+        }
+
+        .moj-swal-button:focus {
+            box-shadow: 0 0 0 3px rgba(180, 66, 227, 0.5) !important;
+        }
+
+        .swal2-icon.swal2-error {
+            border-color: #b442e3 !important;
+        }
+
+        .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
+            background-color: #b442e3 !important;
+        }
+
+
+@media (max-width: 768px) {
+    .header-text {
+        display: none;
+    }
+
+    .page-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .social {
+        margin-left: 32px;
+    }
+
+    .register {
+        margin-right: -32px;
+    }
+
+    .login-box {
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        height: calc(100% + 32px);
+    }
+
+    .login-input{
+        width: 100%;
+    }
+
+    #pogojiCheck{
+        width: calc(100% + 32px);
+    }
+    #drobnitisk{
+        width: 100%;
+    }
+
+    #oddajaNarocila{
+        width: 100%;
+        
+    }
+
+   
+
+    #noviceCheck{
+        margin-left: -16px;
+        width: calc(100% + 32px);
+    }
+
+     .btnNadaljuj{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    ul{
+        width: 100%;
+        margin-left: 10px;
+    }
+
+    #podpora{
+        width: calc(100% + 32px);
+    }
+
+    .login-glava{
+        height: calc(100% + 20px);
+        width: calc(100% + 32px);
+        
+    }
+
+    #glavaText{
+        display: block;
+        width: calc(350px);
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .noga {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .NogaVPPN {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #varno{
+        margin-right: -190px;
+    }
+}
+
+    @media (max-width: 480px) {
+
+        #varno{
+            width: calc(100% - 150px);
+            margin-right: 10px;
+        }
+
+        #glavaText{
+            font-size: 12px;
+        }
+
+        .pomoc{
+            margin-left: -10px;
+        }
+        
+    }
+    

@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background: url("/slike/waves2.svg") center -50px no-repeat;
+    background-color: #140a14;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.glava {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-image: linear-gradient(#140a14, rgba(20,10,20,0));
+}
+
+.korak {
+    color: #000000;
+}
+
+.header-reg-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-text {
+    font-size: 16px;
+    color: #9c9c9c;
+    font-weight: 400;
+}
+
+.btnGlavaRegistracija {
+    background: #cd50ff;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.login-box {
+    width: 500px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 20px;
+}
+
+.login-glava {
+    margin-left: -32px;
+    width: calc(100% + 64px);
+    height: 60px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.h1prijava {
+    margin-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.login-input {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#email, #geslo {
+    width: 100%;
+    height: 55px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 3px;
+    outline: none;
+}
+
+#email:focus, #geslo:focus {
+    border: 2px solid #cd50ff;
+}
+
+.pozabljeno {
+    padding-left: 5px;
+    color: #9D74E8;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.pozabljeno:hover {
+    text-decoration: underline;
+}
+
+.btnPrijava {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cd50ff;
+}
+
+#social {
+    margin-top: 16px;
+    margin-left: -32px;
+    padding-left: 32px;
+    border-top: 1px solid rgb(200, 200, 200);
+    border-bottom: 1px solid rgb(200, 200, 200);
+    width: calc(100% + 64px);
+    height: auto;
+    padding-bottom: 16px;
+}
+
+.facebookPrijava, .googlePrijava {
+    margin-top: 16px;
+    display: block;
+    width: calc(100% - 32px);
+    height: 40px;
+    text-align: left;
+    background-color: #efe7fb;
+    border: none;
+    color: #6E32DC;
+    font-size: 14px;
+    font-weight: 200;
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+svg path {
+    fill: #6e32dc;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.register {
+    margin-left: -32px;
+    padding-left: 32px;
+    padding-top: 10px;
+    width: calc(100% + 64px);
+    height: auto;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    padding-bottom: 16px;
+}
+
+.registerText {
+    margin-top: 10px;
+    color: #838383;
+    font-size: 14px;
+}
+
+.btnRegistrirajSe {
+    margin-top: 10px;
+    width: calc(100% - 32px);
+    height: 40px;
+    color: #6e32dc;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #6e32dc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.pomoc {
+    color: black;
+    font-weight: 200;
+    font-size: 13px;
+    display: block;
+    margin-top: 10px;
+}
+
+.kontaktirajte {
+    color: #9D74E8;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.kontaktirajte:hover {
+    text-decoration: underline;
+}
+
+.iconPhone, .iconMail {
+    height: 20px;
+}
+
+.voyomail, .voyophone {
+    font-size: 14px;
+    color: #9D74E8;
+    text-decoration: none;
+}
+
+.telefon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer {
+    padding-top: 32px;
+    width: 100%;
+    background-color: black;
+    font-size: 14px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.noga {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.NogaVPPN {
+    margin: 20px 0;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+.noga::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nogaBold {
+    font-weight: 600;
+}
+
+.nogaText {
+    line-height: 30px;
+    display: block;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nogaText:hover {
+    color: #dddddd;
+}
+
+.copy {
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-text {
+        display: none;
+    }
+
+    .page-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .social {
+        margin-left: 32px;
+    }
+
+    .register {
+        margin-right: -32px;
+    }
+
+    .login-box {
+        width: 100%;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .login-glava, #social, .register {
+        width: calc(100% + 64px);
+    }
+
+    .noga {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .NogaVPPN {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

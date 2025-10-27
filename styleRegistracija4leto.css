@@ -1,0 +1,600 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+        }
+
+        body {
+
+            background-color: #140a14;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .glava {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-image: linear-gradient(#140a14, rgba(20, 10, 20, 0));
+        }
+
+        .logo img {
+            content: "VOYO";
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .header-reg-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-text {
+            font-size: 16px;
+            color: #9c9c9c;
+            font-weight: 400;
+        }
+
+        .btnGlavaRegistracija {
+            background: #cd50ff;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        .page-container {
+            margin-top: 82px;
+            display: flex;
+            justify-content: center;
+            min-height: 1300px;
+            padding-top: 20px;
+        }
+
+
+        .login-box {
+            width: 500px;
+            height: 900px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            padding: 16px;
+            color: #000;
+            display: block; 
+            position: relative;
+            top: 0;
+        }
+
+        .login-glava {
+            margin-left: -16px;
+            width: 500px;
+            height: 140px;
+            border-bottom: 1px solid rgb(200, 200, 200);
+            padding-top: 32px;
+            line-height: 5px;
+        }
+
+
+        .korak {
+            font-weight: 400;
+            font-size: 12px;
+            color: gray;
+
+        }
+
+        .boldKorak {
+            font-size: 12px;
+            font-weight: 600;
+
+        }
+
+        #korakteks {
+            margin-left: 32px;
+        }
+
+        .h1registracija {
+            margin-top: 32px;
+            margin-left: 32px;
+            margin-right: 32px;
+            color: #000000;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+
+        .login-input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+            font-family: Arial, sans-serif;
+        }
+
+        #gpaylink{
+            text-decoration: none;
+        }
+        #btnGpay {
+            width: 430px;
+            height: 50px;
+            background-color: #000;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Roboto;
+            cursor: pointer;
+        }
+
+        #btnGpay svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        #btnGpay:hover {
+            background-color: #111;
+        }
+
+
+        #aliali{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            color: #8a8a8a;
+            font-size: 12px;
+        }
+
+        #hrLevi, #hrDesni{
+            width: 150px;
+            margin: 8px;
+        }
+
+        #karticaTxt{
+            font-weight: 700;
+        }
+
+        #karticaVnos{
+            background-color: rgb(243, 243, 243);
+            border-radius: 8px;
+            width: 400px;
+            height: 450px;
+            margin-top: 10px;
+            border: 2px solid rgb(228, 228, 228);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        #karticaVnos input {
+            border: 1px solid gray;
+            padding-left: 10px;
+            padding-top: 2px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 4px;
+        }
+
+        #glavaKarticaText{
+            display: block;
+            font-size: 12px;
+            color: #929292;
+        }
+
+
+        .podatkiKarticeText{
+            font-size: 12px;
+            color: #000;
+            margin-top: 10px;
+        }
+
+        input{
+            font-size: 15px;
+        }
+
+        #stKartice{
+            display: block;
+            width: 360px;
+        }
+
+        #datum{
+            float: left;
+            width: 170px;
+        }
+
+        #datumv{
+            width: 160px;
+        }
+
+        #cvvVnos{
+            float: right;
+            width: 170px;
+        }
+
+        #cvv{
+            width: 160px;
+        }
+
+        #datumcvv{
+            display: flex; 
+            justify-content: space-between;
+            width: 360px;
+            margin-top: 10px;
+        }
+        
+        #datumcvv input {
+            padding-right: 10px;
+        }
+
+
+        #ime{
+            margin-top: 20px;
+            width: 399px;
+            height: 70px;
+            display: block;
+        }
+
+        #podatkiIme{
+            display: block;
+        }
+
+        #imeNaKartici{
+            width: 360px;
+        }
+
+        #btnplacilo{
+            margin-top: 15px;
+            width: 360px;
+            height: 40px;
+            background-color: #00112c;
+            color: white;
+            font-size: 16px;
+            line-height: 40px;
+            font-weight: 600;
+            border: 0px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        #btnplacilo:hover{
+            background-color: #002244;
+        }
+
+        .ikonaBanka{
+            width: 30px;
+            height: 30px;
+            border-radius: 10px;
+            margin-right: 5px;
+        }
+
+
+        #podpora {
+            border-top: 1px solid #d3d3d3;
+            margin-top: 20px;
+            width: 500px;
+            margin-left: -16px;
+        }
+
+        .pomoc {
+            color: black;
+            font-weight: 200;
+            font-size: 14px;
+
+        }
+
+        .kontaktirajte {
+            color: #9D74E8;
+            text-decoration: none;
+            margin-left: 4px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .kontaktirajte:hover {
+            text-decoration: underline;
+        }
+
+        .kontakt {
+            margin-left: 32px;
+            margin-top: 16px;
+            padding-top: 10px;
+
+        }
+
+        .telefon,
+        .eposta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .iconPhone,
+        .iconMail {
+            height: 18px;
+            width: 18px;
+            fill: #9D74E8;
+            flex-shrink: 0;
+        }
+
+        .voyophone,
+        .voyomail {
+            font-size: 14px;
+            color: #9D74E8;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .voyophone:hover,
+        .voyomail:hover {
+            font-size: 14px;
+            color: #9D74E8;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .voyophone:hover,
+        .voyomail:hover {
+            color: #7e52d8;
+        }
+
+footer {
+    padding-top: 32px;
+    width: 100%;
+    background-color: black;
+    font-size: 14px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.noga {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.NogaVPPN {
+    margin: 20px 0;
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+.noga::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nogaBold {
+    font-weight: 600;
+}
+
+.nogaText {
+    line-height: 30px;
+    display: block;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.nogaText:hover {
+    color: #dddddd;
+}
+
+.copy {
+    text-align: center;
+    color: #8a8a8a;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+        input[type="checkbox"] {
+            transform: scale(1.4);
+            accent-color: #6e32db;
+            cursor: pointer;
+            margin-right: 6px;
+            border-radius: 0;
+        }
+
+
+        /*SWEEETTT  ALERT!!!*/
+        .moj-swal-popup {
+            font-family: Roboto, sans-serif !important;
+            border-radius: 8px !important;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4) !important;
+            max-width: 350px;
+        }
+
+        .moj-swal-title {
+            color: #000000 !important;
+            font-weight: 600 !important;
+        }
+
+        .moj-swal-content {
+            color: #4a4a4a !important;
+        }
+
+        .moj-swal-button {
+            background-color: #cd50ff !important;
+            color: white !important;
+            border: none !important;
+            border-radius: 4px !important;
+            font-weight: 700 !important;
+        }
+
+        .moj-swal-button:focus {
+            box-shadow: 0 0 0 3px rgba(205, 80, 255, 0.5) !important;
+        }
+
+@media (max-width: 768px) {
+    .header-text {
+        display: none;
+    }
+
+    .page-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .social {
+        margin-left: 32px;
+    }
+
+    .register {
+        margin-right: -32px;
+    }
+
+    .login-box {
+        width: 100%;
+        height: calc(100% + 1px);
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+        .login-glava{
+
+        width: calc(100% + 32px);
+        
+    }
+
+    .noga {
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .NogaVPPN {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+        #podpora{
+        width: calc(100% + 32px);
+    }
+
+    #karticaVnos{
+        width: 100%;
+        height: 100%;
+    }
+
+    #stKartice{
+        width: calc(100% - 0px);
+    }
+
+    #datumv{
+        width: calc(100% - 54px);
+    }
+
+    #cvv{
+        width: calc(100% - 54px);
+    }
+
+    #imeNaKartici{
+        width: calc(100% - 92px);
+    }
+
+    #btnplacilo{
+        width: calc(100% + 2px);
+    }
+
+    #btnGpay{
+        width: calc(100% + 200px);
+        margin-left: -100px;
+    }
+
+    #alitext{
+        width: calc(55px);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .NogaVPPN {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+        #podpora{
+        width: calc(100% + 32px);
+    }
+
+    #karticaVnos{
+        width: 100%;
+        height: 100%;
+    }
+
+    #stKartice{
+        width: calc(100% - 0px);
+    }
+
+    #datumv{
+        width: calc(100% - 84px);
+    }
+
+    #cvv{
+        width: calc(100% - 84px);
+        
+    }
+
+    #imeNaKartici{
+        width: calc(100% - 132px);
+    }
+
+    #btnplacilo{
+        width: calc(100% + 2px);
+    }
+
+    #btnGpay{
+        width: calc(100% + 200px);
+        margin-left: -100px;
+    }
+
+    #alitext{
+        text-align: center;
+    }
+
+    hr{
+        display: none;
+    }
+
+    .pomoc{
+        margin-left: -10px;
+    }
+}
+    
