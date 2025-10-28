@@ -282,6 +282,32 @@ body {
 
 }
 
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 2.5rem; 
+}
+
+.password-container .material-icons {
+  position: absolute;
+  right: 0.75rem;
+  cursor: pointer;
+  color: #6e32dc; 
+  font-size: 22px;
+  user-select: none;
+  transition: color 0.2s ease;
+  margin-top: 25px;
+}
+
+.password-container .material-icons:hover {
+  color: #9b5cff;
+}
+
 
 
 #telefon {

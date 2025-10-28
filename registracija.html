@@ -29,67 +29,82 @@
                 <label id="glavaText">Izberi e-naslov in geslo za prijavo v VOYO.</label>
             </div>
 
-            
-                <div class="login-input">
-                    <input type="email" id="email" name="email" placeholder="E-naslov*" required>
-                    <label id="emailText">Obvezno polje</label><br>
 
-                    <div class="checkINteks">
-                        <input type="checkbox" id="jePravna" name="jePravnaOseba" ><label id="pravnaTeks"
-                            for="jePravna">Prijavljam se kot pravna oseba (neobvezno)</label>
-                    </div>
+            <div class="login-input">
+                <input type="email" id="email" name="email" placeholder="E-naslov*" required>
+                <label id="emailText">Obvezno polje</label><br>
 
-                    <div id="pravnaOseba">
-                        <input type="tekst" id="imePodjetja" name="imePodjetja" placeholder="Ime podjetja" required>
-                        <input type="number" id="davcnaSt" name="davcnaSt" placeholder="Davčna Številka" required>
-                        <label id="davcnastTeks">V obliki SI12345678 ali 12345678</label>
-                    </div>
+                <div class="checkINteks">
+                    <input type="checkbox" id="jePravna" name="jePravnaOseba"><label id="pravnaTeks"
+                        for="jePravna">Prijavljam se kot pravna oseba (neobvezno)</label>
+                </div>
+
+                <div id="pravnaOseba">
+                    <input type="tekst" id="imePodjetja" name="imePodjetja" placeholder="Ime podjetja" required>
+                    <input type="number" id="davcnaSt" name="davcnaSt" placeholder="Davčna Številka" required>
+                    <label id="davcnastTeks">V obliki SI12345678 ali 12345678</label>
+                </div>
 
 
+                <div class="password-container">
                     <input type="password" id="geslo" name="geslo" placeholder="Geslo*" required>
-                    <label id="gesloText">Geslo mora vsebovati od 5 do 32 znakov</label>
+                    <span id="togglePassword" class="material-icons">visibility</span>
+                </div>
+                <label id="gesloText">Geslo mora vsebovati od 5 do 32 znakov</label>
 
+
+
+
+
+                <div class="password-container">
                     <input type="password" id="potrdiGeslo" name="potrdiGeslo" placeholder="Potrditev gesla*" required>
-
-                    <input type="tel" id="telefon" name="telefon" placeholder="Telefonska številka" >
-
-                    <input type="checkbox" id="uporabaTel" name="uporabaTelst" >
-                    <label for="uporabaTel" id="uporabaTelText">Strinjam se z uporabo telefonske številke za namene
-                        obveščanja o storitvah podjetja ProPlus*</label>
-
+                    <span id="togglePassword2" class="material-icons">visibility</span>
                 </div>
 
 
+                <input type="tel" id="telefon" name="telefon" placeholder="Telefonska številka">
+
+                <input type="checkbox" id="uporabaTel" name="uporabaTelst">
+                <label for="uporabaTel" id="uporabaTelText">Strinjam se z uporabo telefonske številke za namene
+                    obveščanja o storitvah podjetja ProPlus*</label>
+
+            </div>
 
 
-                <div id="uporabaPodCheck">
-                    <input type="checkbox" id="uporabaPod" name="uporabaPod" >
-                    <label for="uporabaPod" id="uporabaPodText">
-                        Strinjam se, da spletne strani Pro Plus na podlagi mojih osebnih podatkov in zgodovine ogledov
-                        vsebin oblikujejo moj profil in mi priporočajo meni primerne vsebine, oglase ter s tem
-                        izboljšajo mojo uporabniško izkušnjo.
-                    </label>
-                </div>
 
-                <div id="NadaljujinCheck">
+
+            <div id="uporabaPodCheck">
+                <input type="checkbox" id="uporabaPod" name="uporabaPod">
+                <label for="uporabaPod" id="uporabaPodText">
+                    Strinjam se, da spletne strani Pro Plus na podlagi mojih osebnih podatkov in zgodovine ogledov
+                    vsebin oblikujejo moj profil in mi priporočajo meni primerne vsebine, oglase ter s tem
+                    izboljšajo mojo uporabniško izkušnjo.
+                </label>
+            </div>
+
+            <div id="NadaljujinCheck">
                 <div id="pogojiCheck">
                     <input type="checkbox" id="pogoji" name="pogoji" required>
                     <label for="pogoji" id="pogojiText">
-                        Strinjam se s <a href="https://images.24ur.com/media//document/Mar2025/63381122.pdf?v=1741945995" class="linkPogoji">Splošnimi pogoji registracije</a> in
-                        <a href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625" class="linkPogoji">Politiko zasebnosti</a>.
+                        Strinjam se s <a
+                            href="https://images.24ur.com/media//document/Mar2025/63381122.pdf?v=1741945995"
+                            class="linkPogoji">Splošnimi pogoji registracije</a> in
+                        <a href="https://images.24ur.com/media//document/May2025/63407985.pdf?v=1746620625"
+                            class="linkPogoji">Politiko zasebnosti</a>.
                     </label>
-                    
+
                 </div>
 
- <button  id="btnNadaljuj" class="btnNadaljuj" disabled>NADALJUJ</button></div>
-            
+                <button id="btnNadaljuj" class="btnNadaljuj" disabled>NADALJUJ</button>
+            </div>
+
 
 
 
             <div class="kontakt">
-                
-            <span class="pomoc">Potrebuješ dodatno pomoč?</span> <a href="kontakt.html"
-                class="kontaktirajte">Kontaktirajte nas</a>
+
+                <span class="pomoc">Potrebuješ dodatno pomoč?</span> <a href="kontakt.html"
+                    class="kontaktirajte">Kontaktirajte nas</a>
                 <div class="telefon">
                     <onl-icons><svg class="iconPhone" id="Layer_1" data-name="Layer 1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -160,10 +175,32 @@
     </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+
+    <script>
+        const gesloInput = document.getElementById('geslo');
+        const togglePassword = document.getElementById('togglePassword');
+
+        const potrdiInput = document.getElementById('potrdiGeslo');
+        const togglePassword2 = document.getElementById('togglePassword2');
+
+
+        togglePassword.addEventListener('click', () => {
+            const isPassword = gesloInput.type === 'password';
+            gesloInput.type = isPassword ? 'text' : 'password';
+            togglePassword.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+
+
+        togglePassword2.addEventListener('click', () => {
+            const isPassword = potrdiInput.type === 'password';
+            potrdiInput.type = isPassword ? 'text' : 'password';
+            togglePassword2.textContent = isPassword ? 'visibility_off' : 'visibility';
+        });
+    </script>
 
 </body>
 
 </html>
-
