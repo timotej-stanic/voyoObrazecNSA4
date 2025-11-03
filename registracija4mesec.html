@@ -166,83 +166,83 @@
         const cvvInput = document.getElementById('cvv');
         const paymentButton = document.getElementById('btnplacilo');
 
-        // Maska za številko kartice (XXXX XXXX XXXX XXXX)
+        
         cardInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
-            value = value.substring(0, 16); // Omejitev na 16 števk
-            // Vstavi presledek vsake 4 števke
+            let value = e.target.value.replace(/\D/g, ''); 
+            value = value.substring(0, 16); 
+            
             value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
             e.target.value = value;
         });
 
-        // Maska za datum (MM/LL)
+        
         dateInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
-            value = value.substring(0, 4); // Omejitev na 4 števke
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.substring(0, 4); 
 
             if (value.length > 2) {
-                // Vstavi poševnico
+               
                 value = value.substring(0, 2) + '/' + value.substring(2);
             }
             e.target.value = value;
         });
 
-        // Omejitev CVV na 3 števke
+        
         cvvInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, ''); // Odstrani vse, kar ni številka
-            e.target.value = value.substring(0, 3); // Omejitev na 3 števke
+            let value = e.target.value.replace(/\D/g, ''); 
+            e.target.value = value.substring(0, 3); 
         });
 
 
-        // --- Validation Logic (Ob kliku na gumb) ---
+       
 
         paymentButton.addEventListener('click', function(event) {
-            event.preventDefault(); // Prepreči privzeto dejanje
+            event.preventDefault(); 
 
-            const stKartice = cardInput.value.replace(/\s/g, ''); // Očisti presledke
+            const stKartice = cardInput.value.replace(/\s/g, ''); 
             const datumV = dateInput.value;
             const cvv = cvvInput.value;
             const imeNaKartici = document.getElementById('imeNaKartici').value.trim();
 
             let validationErrors = [];
 
-            // 1. Validacija številke kartice (16 števk)
+           
             if (stKartice.length !== 16 || !/^\d{16}$/.test(stKartice)) {
                 validationErrors.push("Številka kartice mora imeti 16 števk.");
             }
 
-            // 2. Validacija CVV (3 števke)
+            
             if (cvv.length !== 3 || !/^\d{3}$/.test(cvv)) {
                 validationErrors.push("Varnostna koda (CVV) mora imeti natanko 3 števke.");
             }
 
-            // 3. Validacija Datuma Veljavnosti (MM/LL in logična kontrola > 10/25)
+      
             if (!/^\d{2}\/\d{2}$/.test(datumV)) {
                 validationErrors.push("Datum veljavnosti ni v pravilnem formatu MM/LL.");
             } else {
                 const [monthStr, yearStr] = datumV.split('/');
                 const month = parseInt(monthStr, 10);
-                const year = parseInt(yearStr, 10); // Dvomestno leto (npr. 25)
+                const year = parseInt(yearStr, 10); 
 
-                // Preverjanje veljavnosti meseca
+            
                 if (month < 1 || month > 12) {
                     validationErrors.push("Mesec veljavnosti ni veljaven (1-12).");
                 }
                 
-                // Ključno preverjanje: MM/LL mora biti STROGO > 10/25
+              
                 const requiredYear = 25;
                 const requiredMonth = 10;
                 let isExpired = false;
 
                 if (year < requiredYear) {
-                    isExpired = true; // Prej kot 25 (npr. 24)
+                    isExpired = true; 
                 } else if (year === requiredYear) {
                     if (month <= requiredMonth) {
-                        isExpired = true; // 10/25 ali manj
+                        isExpired = true; 
                     }
                 }
                 
-                // Preverjanje, da vnesemo smiselno leto v prihodnosti (npr. do 99)
+             
                 if (year > 99) {
                      validationErrors.push("Leto veljavnosti ni veljavno.");
                 }
@@ -253,14 +253,14 @@
                 }
             }
 
-            // 4. Validacija Imena na Kartici (osnovno)
+       
             if (imeNaKartici.length < 2) {
                 validationErrors.push("Ime na kartici je obvezno.");
             }
 
 
             if (validationErrors.length > 0) {
-                // Prikaz SweetAlert za napako
+           
                 Swal.fire({
                     icon: 'error',
                     title: 'Napaka Pri Plačilu!',
@@ -274,7 +274,7 @@
                     }
                 });
             } else {
-                // Prikaz SweetAlert za uspeh
+            
                 Swal.fire({
                     icon: 'success',
                     title: 'Uspešno!',
@@ -288,7 +288,7 @@
                         confirmButton: 'moj-swal-button'
                     }
                 }).then((result) => {
-                    // Preusmeritev po potrditvi
+                   
                     if (result.isConfirmed) {
                         window.location.href = 'index.html';
                     }

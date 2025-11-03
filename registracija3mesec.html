@@ -189,52 +189,50 @@
         </div> <span class="copy">© 2025 VOYO. Vse pravice pridržane.</span>
     </footer>
     <script>
-        // Logika za SweetAlert in preverjanje plačilne metode
+       
         document.addEventListener('DOMContentLoaded', () => {
             const btnNadaljuj = document.getElementById('btnNadaljuj');
             const pogojiCheckbox = document.getElementById('pogoji');
 
             /**
-             * Preveri, ali je potrditveno polje za pogoje označeno.
-             * @returns {boolean} True, če je označeno.
+          
+             * @returns {boolean} 
              */
             const isChecked = () => pogojiCheckbox.checked;
 
-            /**
-             * Nastavi stanje gumba glede na stanje potrditvenega polja.
-             */
+ 
             const updateButtonState = () => {
                 const checked = isChecked();
                 btnNadaljuj.disabled = !checked;
-                // Stilsko prilagodimo gumb glede na stanje (opacity in cursor)
+               
                 btnNadaljuj.style.opacity = checked ? '1' : '0.6';
                 btnNadaljuj.style.cursor = checked ? 'pointer' : 'not-allowed';
             };
 
-            // Inicializacija stanja gumba ob nalaganju strani
+           
             updateButtonState();
 
-            // Poslušalec dogodkov za spremembo stanja potrditvenega polja
+          
             pogojiCheckbox.addEventListener('change', updateButtonState);
 
-            // Poslušalec dogodkov za klik na gumb 'NADALJUJ'
+           
             btnNadaljuj.addEventListener('click', (event) => {
-                event.preventDefault(); // Prepreči privzeto navigacijo
+                event.preventDefault(); 
 
                 if (!isChecked()) {
-                    // Če pogoji niso sprejeti, ne naredimo nič (gumb je onemogočen, ampak dodatna zaščita)
+                   
                     return;
                 }
 
-                // Poišči izbrano plačilno metodo
+               
                 const selectedPaymentInput = document.querySelector('input[name="placilo"]:checked');
                 const selectedPayment = selectedPaymentInput ? selectedPaymentInput.value : null;
 
                 if (selectedPayment === 'kartica') {
-                    // Če je izbrana plačilna kartica, nadaljujemo na naslednjo stran
+             
                     window.location.href = 'registracija4mesec.html';
                 } else if (selectedPayment === 'sms' || selectedPayment === 'paypal') {
-                    // Če je izbran SMS ali PayPal, prikaži SweetAlert opozorilo
+                  
                     Swal.fire({
                         title: 'Žal mi je, to plačilo trenutno ni možno',
                         html: 'Plačilo s SMS-om in PayPal-om trenutno žal ni na voljo. Prosimo, izberite **Plačilno kartico** za dokončanje naročila.',
@@ -248,7 +246,7 @@
                         }
                     });
                 } else {
-                    // Če ni izbrana nobena metoda (bi se moralo redko zgoditi, ker je SMS privzeto izbran)
+                 
                     Swal.fire({
                         title: 'Izberi način plačila',
                         text: 'Prosimo, izberite enega od ponujenih načinov plačila.',
