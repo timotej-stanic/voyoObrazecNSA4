@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vsi smo tukaj</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="nofollow, noindex" />
+    <link rel="stylesheet" href="style.css?v=1.2">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -201,7 +202,55 @@
         if (loginButton) {
             loginButton.addEventListener('click', handleLoginAction);
         }
-    </script>
+    
+    function handleLoginAction() {
+        const emailValue = emailInput.value.trim();
+        const passwordValue = passwordInput.value.trim();
+
+       
+        if (emailValue === "" || passwordValue === "") {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Opozorilo',
+                text: 'Prosimo, vnesite e-naslov in geslo.',
+                confirmButtonText: 'V redu',
+                confirmButtonColor: '#cd50ff'
+            });
+            return;
+        }
+
+        
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailValue)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Neveljaven e-naslov',
+                text: 'Prosimo, vnesite pravilen e-naslov.',
+                confirmButtonText: 'V redu',
+                confirmButtonColor: '#cd50ff'
+            });
+            return;
+        }
+
+        
+        Swal.fire({
+            title: 'Uspešna prijava!',
+            html: 'Prijavljeni ste v VOYO. <br> Preusmeritev na glavno stran sledi čez 2 sekundi...',
+            icon: 'success',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            willClose: () => {
+                window.location.replace(TARGET_URL);
+            }
+        });
+    }
+
+    if (loginButton) {
+        loginButton.addEventListener('click', handleLoginAction);
+    }
+</script>
+
 </body>
 
 </html>
